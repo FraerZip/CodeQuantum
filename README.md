@@ -1,3 +1,1 @@
-Hello
-Hello
-World
+I started create my new project for Diplom on ALHT
