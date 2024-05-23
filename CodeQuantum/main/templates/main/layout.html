@@ -17,14 +17,15 @@
 
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo" data-scroll="#intro">CodeQuantum Studio</div>
+            <div class="header__logo" {% comment %}data-scroll="#intro"{% endcomment %}>
+                <a href="{% url 'home' %}" class="header__logo">CodeQuantum Studio</a></div>
 
             <nav class="nav" id="nav">
                 <a class="nav__link" href="{% url 'about' %}" {% comment %}data-scroll="#about"{% endcomment %}>О нас</a>
-                <a class="nav__link" href="#" data-scroll="#services">Сервис</a>
+<!--                <a class="nav__link" href="#" data-scroll="#services">Сервис</a>-->
                 <a class="nav__link" href="#" data-scroll="#blog">Курсы</a>
-                <a class="nav__link" href="#" data-scroll="#works">Работа</a>
-                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>
+<!--                <a class="nav__link" href="#" data-scroll="#works">Работа</a>-->
+<!--                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>-->
                 <a class="nav__link" href="#">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
@@ -48,7 +49,8 @@
 </div>
 
 <div class="page">
-
+    {% block page_about %}
+    {% endblock %}
 </div>
 
 <div class="page">
