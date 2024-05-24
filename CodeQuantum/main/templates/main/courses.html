@@ -1,0 +1,80 @@
+{% extends 'main/layout.html' %}
+
+{% block courses%}
+    <header class="courses_header">
+        <div class="container">
+            <h1 class="h_courses">Курсы по программированию</h1>
+            <nav class="nav_courses">
+                <button>Программирование</button>
+                <button>Анализ данных</button>
+                <button>Дизайн</button>
+                <button>Менеджмент</button>
+                <button>Маркетинг</button>
+                <button>Английский язык</button>
+                <button>Кем стать в IT</button>
+            </nav>
+            <div class="filters">
+                <button>Высшее образование</button>
+                <button>С нуля</button>
+                <button>С опытом</button>
+                <button>Бесплатно</button>
+                <button>Платно</button>
+                <button>Сбросить фильтры</button>
+                <input type="text" placeholder="Какой навык или курс ищете?">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="courses">
+                <article class="course">
+                    <h2 class="h_courses">Разработчик 1C</h2>
+                    <p>Программирование • 6 месяцев • С нуля</p>
+                    <p>от 6 378 ₽/мес</p>
+                    <p>или сразу 124 000 ₽</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Какую профессию выбрать в программировании</h2>
+                    <p>Поймите, какие бывают разработчики и какой язык программирования ближе</p>
+                    <p>Бесплатно</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Фронтенд-разработчик</h2>
+                    <p>Программирование • 10 месяцев • С нуля</p>
+                    <p>от 7 201 ₽/мес</p>
+                    <p>или сразу 140 000 ₽</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Фулстек-разработчик</h2>
+                    <p>Программирование • 16 месяцев • С нуля</p>
+                    <p>от 11 522 ₽/мес</p>
+                    <p>или сразу 224 000 ₽</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Python-разработчик</h2>
+                    <p>Программирование • 9 месяцев • С нуля</p>
+                    <p>от 7 129 ₽/мес</p>
+                    <p>или сразу 138 600 ₽</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Python-разработчик плюс</h2>
+                    <p>Программирование • 14 месяцев • С нуля</p>
+                    <p>от 11 090 ₽/мес</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Инженер по тестированию</h2>
+                    <p>Программирование • 4 месяца • С нуля</p>
+                    <p>от 3 703 ₽/мес</p>
+                    <p>или сразу 72 000 ₽</p>
+                </article>
+                <article class="course">
+                    <h2 class="h_courses">Java-разработчик</h2>
+                    <p>Программирование • 10 месяцев • С нуля</p>
+                    <p>от 7 561 ₽/мес</p>
+                    <p>или сразу 147 000 ₽</p>
+                </article>
+                
+            </section>
+        </div>
+    </main>
+{% endblock %}

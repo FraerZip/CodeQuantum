@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/main/css/main.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/courses_style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <title>CodeQuantum Studio</title>
-</head>
-<body>
 
+
+    <title>CodeQuantum Studio</title>
+
+</head>
+
+<body>
 
 <header class="header" id="header">
 
@@ -23,12 +27,12 @@
             <nav class="nav" id="nav">
                 <a class="nav__link" href="{% url 'about' %}" {% comment %}data-scroll="#about"{% endcomment %}>О нас</a>
 <!--                <a class="nav__link" href="#" data-scroll="#services">Сервис</a>-->
-                <a class="nav__link" href="#" data-scroll="#blog">Курсы</a>
-<!--                <a class="nav__link" href="#" data-scroll="#works">Работа</a>-->
-<!--                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>-->
-                <a class="nav__link" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
+                <a class="nav__link" href="{% url 'courses_home' %}">Курсы</a>
+                <a class="nav__link" href="#" data-scroll="#works">Работа</a>
+                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>
+<!--                <a class="nav__link" href="#">-->
+<!--                    <i class="fas fa-shopping-cart"></i>-->
+<!--                </a>-->
                 <a class="nav__link" href="#">
                     <i class="fas fa-search"></i>
                 </a>
@@ -50,6 +54,11 @@
 
 <div class="page">
     {% block page_about %}
+    {% endblock %}
+</div>
+
+<div class="page">
+    {% block courses%}
     {% endblock %}
 </div>
 
@@ -92,7 +101,7 @@
 
                     <div class="blogs">
                         <div class="blogs__item">
-                            <img class="blogs__img" src="static/main/img/blog/1.jpg" alt="">
+                            <img class="blogs__img" src="{% static 'main/img/blog/1.jpg'%}" alt="">
                             <div class="blogs__content">
                                 <a class="blogs__title" href="#">HTML/CSS</a>
                                 <div class="blogs__date">20 марта, 2024</div>
@@ -100,7 +109,7 @@
                         </div>
 
                         <div class="blogs__item">
-                            <img class="blogs__img" src="static/main/img/blog/2.jpg" alt="">
+                            <img class="blogs__img" src="{% static 'main/img/blog/2.jpg' %}" alt="">
                             <div class="blogs__content">
                                 <a class="blogs__title" href="#">Python Django</a>
                                 <div class="blogs__date">30 Апреля, 2024</div>
@@ -108,7 +117,7 @@
                         </div>
 
                         <div class="blogs__item">
-                            <img class="blogs__img" src="static/main/img/blog/3.jpg" alt="">
+                            <img class="blogs__img" src="{% static 'main/img/blog/3.jpg' %}" alt="">
                             <div class="blogs__content">
                                 <a class="blogs__title" href="#">PostgreSQL</a>
                                 <div class="blogs__date">5 июня, 2024</div>
@@ -118,35 +127,35 @@
                 </div>
 
                 <div class="footer__col  footer__col--third">
-                    <div class="footer__title">Instagram</div>
+                    <div class="footer__title">ВКонтакте</div>
 
                     <div class="instagram">
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/1.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/1.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/2.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/2.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/3.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/3.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/4.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/4.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/5.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/5.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/6.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/6.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/7.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/7.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/8.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/8.jpg' %}" alt="">
                         </a>
                         <a class="instagram__item" href="#" target="_blank">
-                            <img src="static/main/img/instagram/9.jpg" alt="">
+                            <img src="{% static 'main/img/instagram/9.jpg' %}" alt="">
                         </a>
                     </div>
                 </div>
