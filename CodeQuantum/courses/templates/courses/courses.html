@@ -1,6 +1,6 @@
 {% extends 'main/layout.html' %}
 
-{% block courses%}
+{% block courses %}
     <header class="courses_header">
         <div class="container">
             <h1 class="h_courses">Курсы по программированию</h1>
@@ -73,7 +73,19 @@
                     <p>от 7 561 ₽/мес</p>
                     <p>или сразу 147 000 ₽</p>
                 </article>
-                
+                {% if course %}
+                    {% for el in course %}
+                        <article class="course">
+                            <h2 class="h_courses">{{ el.title }}</h2>
+                            <p>{{ el.type_cours }} • {{ el.period }} • {{ el.exp }}</p>
+                            <p>{{ el.description }}</p>
+                            <p>от {{ el.price_in_month }} ₽/мес</p>
+                            <p>или сразу {{ el.full_price }} ₽</p>
+                        </article>
+                    {% endfor %}
+                {% else %}
+                    <p>В настоящий момент курсов нет!</p>
+                {% endif %}
             </section>
         </div>
     </main>

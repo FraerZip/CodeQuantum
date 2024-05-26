@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -121,7 +121,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static/main/css/main.css',
-    BASE_DIR / 'static/courses/css/courses_style.css',
+    BASE_DIR / 'static/main/css/courses_style.css',
 ]
 
 # Default primary key field type
