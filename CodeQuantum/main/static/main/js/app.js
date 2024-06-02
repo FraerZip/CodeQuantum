@@ -70,5 +70,15 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1
     });
+    document.getElementById('price_in_month').addEventListener('input', function (event) {
+        if (event.target.value < 0) {
+            event.target.value = 0;
+        }
+    });
 
+    document.getElementById('full_price').addEventListener('input', function (event) {
+        if (event.target.value < 0) {
+            event.target.value = 0;
+        }
+    });
 });

@@ -6,3 +6,6 @@ def index(request):
 
 def about(request):
     return render(request, "main/about.html")
+
+def courses(request):
+    return render(request, "courses/courses_home.html")

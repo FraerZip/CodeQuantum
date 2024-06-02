@@ -63,6 +63,11 @@
 </div>
 
 <div class="page">
+    {% block create_course%}
+    {% endblock %}
+</div>
+
+<div class="page">
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container">
@@ -91,6 +96,7 @@
                     </div>
 
                     <form class="subscribe" action="/" method="post">
+                        {% csrf_token %}
                         <input class="subscribe__input" type="email" name="name" placeholder="Твоя почта...">
                         <button class="subscribe__btn" type="submit">Подписаться</button>
                     </form>
