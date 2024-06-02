@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %}
+
+{% block main_title %}Создание нового курса{% endblock %}
+
+{% block create_course %}
+    <div class="form-container">
+        <h1>Форма по добавлению курса</h1>
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.title }}
+            {{ form.type_cours }}
+            {{ form.period }}
+            {{ form.exp }}
+            {{ form.description }}
+            {{ form.price_in_month }}
+            {{ form.full_price }}
+            <span>{{ error }}</span>
+            <button class="add-course-button" type="submit">Добавить курс</button>
+<!--            <input type="text" name="course_name" placeholder="Название курса" class="form-control"><br>-->
+<!--            <input type="text" name="course_type" placeholder="Тип курса" class="form-control"><br>-->
+<!--            <input type="text" name="course_period" placeholder="Период курса" class="form-control"><br>-->
+<!--            <input type="text" name="course_experience" placeholder="Требуемый опыт" class="form-control"><br>-->
+<!--            <input type="text" name="course_description" placeholder="Описание курса" class="form-control"><br>-->
+<!--            <input type="text" name="course_price_month" placeholder="Цена курса за месяц" class="form-control"><br>-->
+<!--            <input type="text" name="course_full_price" placeholder="Полная цена курса" class="form-control"><br>-->
+<!--            <textarea name="course_content" class="form-control" placeholder="Содержание курса"></textarea><br>-->
+        </form>
+    </div>
+{% endblock %}

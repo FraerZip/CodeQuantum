@@ -1,0 +1,75 @@
+{% extends 'main/layout.html' %}
+
+{% block courses %}
+    <header class="courses_header">
+        <div class="container">
+            <h1 class="h_courses">Курсы по программированию</h1>
+<!--            <nav class="nav_courses">-->
+<!--                <button>Программирование</button>-->
+<!--                <button>Анализ данных</button>-->
+<!--                <button>Дизайн</button>-->
+<!--                <button>Менеджмент</button>-->
+<!--                <button>Маркетинг</button>-->
+<!--                <button>Английский язык</button>-->
+<!--                <button>Кем стать в IT</button>-->
+<!--            </nav>-->
+            <div class="filters">
+                <button>Высшее образование</button>
+                <button>С нуля</button>
+                <button>С опытом</button>
+                <button>Бесплатно</button>
+                <button>Платно</button>
+                <button>Сбросить фильтры</button>
+                <input type="text" placeholder="Какой навык или курс ищете?">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="courses">
+                <a href="" class="course">
+                    <article>
+                        <h2 class="h_courses">Разработчик 1C</h2>
+                        <p>Программирование • 6 месяцев • С нуля</p>
+                        <p>от 6 378 ₽/мес</p>
+                        <p>или сразу 124 000 ₽</p>
+                    </article>
+                </a>
+                <a href="" class="course">
+                    <article>
+                        <h2 class="h_courses">Python-разработчик</h2>
+                        <p>Программирование • 9 месяцев • С нуля</p>
+                        <p>от 7 129 ₽/мес</p>
+                        <p>или сразу 138 600 ₽</p>
+                    </article>
+                </a>
+                <a href="" class="course">
+                    <article>
+                        <h2 class="h_courses">Java-разработчик</h2>
+                        <p>Программирование • 10 месяцев • С нуля</p>
+                        <p>от 7 561 ₽/мес</p>
+                        <p>или сразу 147 000 ₽</p>
+                    </article>
+                </a>
+                {% if course %}
+                    {% for el in course %}
+                        <a href="" class="course">
+                            <article>
+                                <h2 class="h_courses">{{ el.title }}</h2>
+                                <p>{{ el.type_cours }} • {{ el.period }} • {{ el.exp }}</p>
+                                <p>{{ el.description }}</p>
+                                <p>от {{ el.price_in_month }} ₽/мес</p>
+                                <p>или сразу {{ el.full_price }} ₽</p>
+                            </article>
+                        </a>
+                    {% endfor %}
+                {% else %}
+                    <p>В настоящий момент курсов нет!</p>
+                {% endif %}
+
+                <a href="{% url 'create_course' %}"><button class="add-course-button">Добавить курс</button></a>
+                
+            </section>
+        </div>
+    </main>
+{% endblock %}

@@ -2,7 +2,178 @@
 
 {% block main_title %}Главная страница{% endblock %}
 
-{% block content %}
-    <h1>You here to my friend! It`s page on information about us</h1>
-    <p>Let`s go do it little bich</p>
+{% block page_about %}
+<section class="section" id="about">
+        <div class="container" id="intro">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">А это мы!</h3>
+                <h2 class="section__title">Немного про нас</h2>
+                <div class="section__text">
+                    <p>CodeQuantum Studio (CQS) — это платформа, где современная философия встречается с брутальной силой программирования. Мы создали это пространство для тех, кто ищет не просто курсы по программированию, а настоящий опыт погружения в квантовые глубины кодирования.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="static/main/img/about/team.jpg" alt="">
+                        </div>
+                        <div class="card__text">Крутая команда</div>
+                    </div>
+                </div>
+
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="static/main/img/about/program.jpg" alt="">
+                        </div>
+                        <div class="card__text">Уникальная программа</div>
+                    </div>
+                </div>
+
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="static/main/img/about/3.jpg" alt="">
+                        </div>
+                        <div class="card__text">Высокое качество</div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">У нас есть то, чего нет у других!</h3>
+                <h2 class="section__title">Потрясающие преимущества</h2>
+            </div>
+
+            <div class="services">
+                <div class="services__item  services__item--border">
+                    <img class="services__icon" src="static/main/img/services/photography.png" alt="">
+
+                    <div class="services__title">Гибкий темп обучения</div>
+                    <div class="services__text">Возможность ускорять и замедлять образовательный процесс.</div>
+                </div>
+                <div class="services__item  services__item--border">
+                    <img class="services__icon" src="static/main/img/services/webdesign.png" alt="">
+
+                    <div class="services__title">Обучение по принципу STEM</div>
+                    <div class="services__text">Все занятия связаны между собой — вы учите новый материал и повторяете пройденный одновременно</div>
+                </div>
+                <div class="services__item  services__item--border">
+                    <img class="services__icon" src="static/main/img/services/creativity.png" alt="">
+
+                    <div class="services__title">Четыре формата занятий</div>
+                    <div class="services__text">Можно учиться в группе или индивидуально, смотреть уроки онлайн или полностью в записи.</div>
+                </div>
+                <div class="services__item">
+                    <img class="services__icon" src="static/main/img/services/seo.png" alt="">
+
+                    <div class="services__title">Общение с учителями</div>
+                    <div class="services__text">Индивидуальные консультации с преподавателями.</div>
+                </div>
+                <div class="services__item">
+                    <img class="services__icon" src="static/main/img/services/css-html.png" alt="">
+
+                    <div class="services__title">Поддержка для комплексного роста</div>
+                    <div class="services__text">Мы стремимся не только обучить вас программированию, но и поддержать ваш полноценный рост как IT-специалиста.</div>
+                </div>
+                <div class="services__item">
+                    <img class="services__icon" src="static/main/img/services/digital.png" alt="">
+
+                    <div class="services__title">Актуальные навыки</div>
+                    <div class="services__text">Наши студенты приобретают экспертизу в современных языках программирования, фреймворках и технологиях, таких как Python, JavaScript, React, Node.js и другие.</div>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- Statistics -->
+    <div class="statistics">
+        <div class="container">
+
+            <div class="stat">
+                <div class="stat__item">
+                    <div class="stat__count">89</div>
+                    <div class="stat__text">Проектов от наших учеников</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">354</div>
+                    <div class="stat__text">Обучающихся</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">13</div>
+                    <div class="stat__text">наград на мировом уровне</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">77%</div>
+                    <div class="stat__text">Выпускников находят работу</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count">37</div>
+                    <div class="stat__text">преподавателей и учителей</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Clients -->
+    <section class="section  section--clients">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">Обратная связь!</h3>
+                <h2 class="section__title">Что о нас говорят</h2>
+            </div>
+
+            <div class="clients">
+                <div class="clients__item">
+                    <img class="clients__photo" src="static/main/img/clients/client-1.png" alt="">
+                    <div class="clients__content">
+                        <div class="clients__name">Linus Torvalds</div>
+                        <div class="clients__prof">Создатель GNU/Linux</div>
+                        <div class="clients__text">Я долго думал, как сделать Linux еще лучше. Но, оказывается, ответ был прост - зайти в CodeQuantum Studio! Теперь моя ОС не просто открытая, она квантовая! Даже пингвины в восторге от этой идеи.</div>
+                    </div>
+                </div>
+
+                <div class="clients__item">
+                    <img class="clients__photo" src="static/main/img/clients/client-2.png" alt="">
+                    <div class="clients__content">
+                        <div class="clients__name">Bill Gates</div>
+                        <div class="clients__prof">Создатель Microsoft</div>
+                        <div class="clients__text">CodeQuantum Studio - это место, где я нашел новый вызов после того, как решил отойти от окон. Теперь я не просто программист, я квантовый инженер, который чувствует себя как виртуоз виртуальной симфонии, а не просто дирижер пальцами. Теперь я могу построить не только Windows, но и ворота в будущее.</div>
+                    </div>
+                </div>
+
+                <div class="clients__item">
+                    <img class="clients__photo" src="static/main/img/clients/client-3.png" alt="">
+                    <div class="clients__content">
+                        <div class="clients__name">Mark Zuckerberg</div>
+                        <div class="clients__prof">Создатель Facebook</div>
+                        <div class="clients__text">Когда я решил создать Facebook, я не ожидал, что CodeQuantum Studio станет моим следующим шагом. Теперь моя социальная сеть - это не просто место для общения, это целый виртуальный мир, который я создал, как студент этой школы! Теперь каждый может лайкать свою жизнь, даже если она не в моем приложении. Спасибо, CodeQuantum Studio, за то, что вывели меня за границы моих собственных стен!</div>
+                    </div>
+                </div>
+
+                <div class="clients__item">
+                    <img class="clients__photo" src="static/main/img/clients/client-4.png" alt="">
+                    <div class="clients__content">
+                        <div class="clients__name">Leonardo DiCaprio</div>
+                        <div class="clients__prof">Голливудский актер</div>
+                        <div class="clients__text">Кто бы мог подумать, что после съемок на Титанике я окажусь в мире IT? Но благодаря CodeQuantum Studio я не только плыву в океане кода, но и нахожусь на курсе настоящего успеха! Лучший код - это тот, что создает легенды, а я готов стать капитаном своего собственного корабля в мире программирования!</div>
+                    </div>
+                </div>
+            </div><!-- /.clients -->
+
+        </div><!-- /.container -->
+    </section>
 {% endblock %}
