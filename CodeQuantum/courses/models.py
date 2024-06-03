@@ -14,6 +14,9 @@ class Courses(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return f'/courses/{self.id}'
+
     class Meta:
         verbose_name = 'Курс'
         verbose_name_plural = 'Курсы'

@@ -1726,6 +1726,7 @@ a {
 }
 
 .courses_header {
+    
     background-color: #fff;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
@@ -1733,7 +1734,7 @@ a {
 
 .h1_courses {
     text-align: center;
-    margin: 0;
+    margin: 100px auto 50px auto;
     padding: 0;
 }
 
@@ -1757,6 +1758,7 @@ a {
     justify-content: center;
     margin: 20px 0;
     flex-wrap: wrap;
+    
 }
 
 .filters button, .filters input {
@@ -1767,10 +1769,25 @@ a {
     border-radius: 4px;
     background: none;
     cursor: pointer;
+
+    
+}
+
+.filters button:hover{
+    opacity: .7;
+    color: white;
+    background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+    transition: opacity .2s linear;
 }
 
 .filters input {
     flex-grow: 1;
+}
+
+.filters:focus {
+    border-color: #ff7e5f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
 }
 
 main {
@@ -1785,17 +1802,21 @@ main {
     gap: 20px;
 }
 
+.course-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование элементов по горизонтали */
+}
+
 .course {
+    width: 100%; /* Ширина карточки курса */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
 }
 
 .course:hover {
@@ -1811,6 +1832,60 @@ main {
 
 .course p {
     margin: 10px 0;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Green */
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red */
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+
+.add-course-button {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.7s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+.add-course-button:hover {
+    opacity: .7;
+    color: white;
+    background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+    transition: opacity .2s linear;
 }
 
 .add-course-button {
@@ -1835,6 +1910,7 @@ main {
     transition: background 0.7s ease-in-out;
     border-color: black;
     border: 1px solid #ddd;
+
 }
 
 .add-course-button:hover {
@@ -1867,6 +1943,8 @@ main {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+
+    font-size: 16px;
 }
 
 .form-control:focus {
@@ -1877,4 +1955,13 @@ main {
 
 textarea.form-control {
     resize: vertical;
+}
+
+/* Динамическая страница с курсами */
+.course-page{
+    width: 90%;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    
 }

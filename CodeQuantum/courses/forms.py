@@ -1,5 +1,5 @@
 from .models import Courses
-from django.forms import ModelForm, TextInput, NumberInput
+from django.forms import ModelForm, TextInput, NumberInput, Textarea
 
 class CoursesForm(ModelForm):
     class Meta:
@@ -34,5 +34,6 @@ class CoursesForm(ModelForm):
             "full_price": NumberInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Полная цена курса'
-            })
+            }),
+
         }
