@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
-from .models import Courses
-from .forms import CoursesForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Courses, Lesson
+from .forms import CoursesForm, LessonForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 
 def courses_home(request):
@@ -40,3 +40,15 @@ def create_course(request):
         'error': error
     }
     return render(request, 'courses/create_course.html', data)
+def create_lesson(request, course_id):
+    course = get_object_or_404(Courses, id=course_id)
+    if request.method == 'POST':
+        form = LessonForm(request.POST)
+        if form.is_valid():
+            lesson = form.save(commit=False)
+            lesson.course = course
+            lesson.save()
+            return redirect('course-detail', pk=course.id)
+    else:
+        form = LessonForm()
+    return render(request, 'courses/create_lesson.html', {'form': form, 'course': course})

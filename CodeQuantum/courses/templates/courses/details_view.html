@@ -4,7 +4,46 @@
     <div class="course-page">
         <div class="section__header">
             <h1 class="section__title">{{ course.title }}</h1>
+            <div class="course-meta">
+                <span class="course-type">{{ course.type_cours }}</span>
+                <span class="course-period">{{ course.period }}</span>
+                <span class="course-exp">{{ course.exp }}</span>
+                <span class="course-price">{{ course.price_in_month }} ₽/мес или {{ course.full_price }} ₽</span>
+            </div>
 
+        </div>
+        <div class="content">
+            <div class="course-description">
+                <h2>Описание</h2>
+                <p>{{ course.description }}</p>
+            </div>
+            <div class="course-content">
+                <h2>Содержание</h2>
+                <p>{{ course.content }}</p>
+            </div>
+        </div>
+        <div class="course-program">
+            <h2>Программа курса</h2>
+            <p>Продолжительность {{ course.duration }} часов</p>
+            <ul class="lesson-list">
+                {% for lesson in course.lessons.all %}
+                    <li class="lesson-item">
+                        <div class="lesson-header">
+                            <span class="lesson-order">{{ lesson.order }}</span>
+                            <span class="lesson-title">{{ lesson.title }}</span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="lessons">
+            <h2>Уроки</h2>
+            <ul>
+                {% for lesson in course.lessons.all %}
+                    <li>{{ lesson.order }}. {{ lesson.title }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'create_lesson' course.id %}" class="add-lesson-button">Добавить урок</a>
         </div>
     </div>
 {% endblock %}

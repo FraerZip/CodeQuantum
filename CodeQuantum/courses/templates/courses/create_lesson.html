@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block main_title %}Создание нового урока{% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <h1>Создание урока для курса "{{ course.title }}"</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="add-course-button" type="submit">Добавить урок</button>
+        </form>
+    </div>
+{% endblock %}
