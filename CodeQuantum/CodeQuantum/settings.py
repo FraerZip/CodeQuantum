@@ -121,7 +121,6 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static/main/css/main.css',
-    BASE_DIR / 'static/main/css/courses_style.css',
 ]
 
 # Default primary key field type

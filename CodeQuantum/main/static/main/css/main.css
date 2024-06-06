@@ -1819,6 +1819,28 @@ main {
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.course-soon{
+    width: 100%; /* Ширина карточки курса */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.course-soon:hover{
+    width: 100%; /* Ширина карточки курса */
+    background-color: #5f5c5c;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 .course:hover {
     opacity: .7;
     color: white;
@@ -1958,10 +1980,415 @@ textarea.form-control {
 }
 
 /* Динамическая страница с курсами */
-.course-page{
-    width: 90%;
+.course-page {
+    width: 85%;
     margin: 100px auto 50px auto;
     padding: 20px;
     background-color: #fff;
+}
+
+.course-page h2 {
+    text-align: center;
+}
+
+.course-program {
+    margin-top: 30px;
+    margin: 0 auto;
+}
+
+.course-program h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.course-program p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.course-meta {
+    margin: 20px 0;
+}
+
+.course-meta span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.course-description {
+    margin: 20px 0;
+}
+
+.course-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.course-description p {
+    font-size: 16px;
+}
+
+/* Уроки */
+
+.lessons {
+    margin: 20px 0;
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lesson-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.lesson-item:last-child {
+    border-bottom: none;
+}
+
+/* Стиль для недоступных уроков */
+
+.lesson-item.locked {
+    pointer-events: none; /* Отключаем возможность клика */
+    background-color: #f2f2f2; /* Цвет фона для недоступного урока */
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.lesson-item.locked:hover {
+    background-color: #e0e0e0; /* Цвет фона при наведении */
+}
+
+.lesson-item.locked::after {
+    content: url('../img/lock_course/lock.png'); /* Путь к изображению замка */
+    position: absolute;
+    right: 50%; /* Положение по горизонтали */
+    top: 50%;
+    transform: translate(50%, -50%); /* Центрирование замка */
+    opacity: 0.5; /* Прозрачность изображения замка */
+}
+
+/* Стиль для ссылок в недоступных уроках */
+.lesson-item.locked .course {
+    background-color: #f2f2f2; /* Цвет фона ссылки */
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+    color: #888; /* Цвет текста */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.lesson-item.locked .course:hover {
+    background-color: #e0e0e0; /* Цвет фона при наведении */
+}
+
+
+.lesson-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.lesson-order {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.lesson-title {
+    font-size: 1.2em;
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+.lesson-description {
+    font-size: 1em;
+   
+    margin-bottom: 10px;
+}
+
+.lesson-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lesson-link {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+/* Адаптивность */
+@media (min-width: 600px) {
+    .lesson-item {
+        flex-direction: row;
+        align-items: center;
+    }
     
+    .lesson-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .lesson-title {
+        width: 30%;
+    }
+    
+    .lesson-description {
+        width: 45%;
+    }
+    
+    .lesson-links {
+        width: 20%;
+        justify-content: flex-end;
+    }
+    
+    .lesson-order {
+        width: 5%;
+        text-align: center;
+    }
+}
+
+/* Уроки */
+
+.lessons {
+    margin: 20px 0;
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lesson-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.lesson-item:last-child {
+    border-bottom: none;
+}
+
+.lesson-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.lesson-order {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.lesson-title {
+    font-size: 1.2em;
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+.lesson-description {
+    font-size: 1em;
+  
+    margin-bottom: 10px;
+}
+
+.lesson-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lesson-link {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+/* Адаптивность */
+@media (min-width: 600px) {
+    .lesson-item {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .lesson-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .lesson-title {
+        width: 30%;
+    }
+    
+    .lesson-description {
+        width: 45%;
+    }
+    
+    .lesson-links {
+        width: 20%;
+        justify-content: flex-end;
+    }
+    
+    .lesson-order {
+        width: 5%;
+        text-align: center;
+    }
+}
+
+/* Стили для кнопок prev next */
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lesson-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lesson-button:hover {
+    opacity: .7;
+    color: white;
+    background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+    transition: opacity .2s linear;
+}
+
+.prev-button::before,
+.next-button::after {
+    content: ' ';
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.prev-button::before {
+    content: '<';
+}
+
+.next-button::after {
+    content: '>';
+}
+
+/* Остальной исходный код */
+.lessons h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.lessons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lessons ul li {
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.add-lesson-button {
+    width: 25%;
+    display: block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff7e5f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  
+}
+
+.add-lesson-button:hover {
+    background-color: #feb47b;
+}
+
+/* Python lesson */
+
+.hello-world-image {
+    display: block;
+    max-width: 65%; /* Измените этот размер по мере необходимости */
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для блока кода */
+.styled-code-block {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.styled-code-block code {
+    display: block;
+    white-space: pre-wrap;
+    color: #333;
+}
+
+/* Стили для блока "Замечание для опытных программистов" */
+.expert-note {
+    border: 2.5px solid #ccc;
+    padding: 15px;
+    /* border-radius: 10px; */
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.expert-note strong {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
 }

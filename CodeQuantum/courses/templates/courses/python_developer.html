@@ -1,0 +1,103 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Python-разработчик{% endblock %}
+
+{% block courses %}
+    <div class="course-page">
+        <div class="section__header">
+            <h1 class="section__title">Python-разработчик</h1>
+            <div class="course-meta">
+                <span class="course-type">Программирование</span>
+                <span class="course-period">9 месяцев</span>
+                <span class="course-exp">С нуля</span>
+                <span class="course-price">от 7 129 ₽/мес или 138 600 ₽ сразу</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="course-content">
+                <h2>Цели курса</h2>
+                <ul>
+                    <li>Изучить основы синтаксиса языка Python</li>
+                    <li>Научиться писать небольшие программы</li>
+                    <li>Познакомиться с отладкой и научиться эффективно ее выполнять</li>
+                </ul>
+            </div>
+            <div class="course-description">
+                <h2>Описание</h2>
+                <p>На этом курсе вы изучите основы языка Python, научитесь разрабатывать приложения и работать с библиотеками.
+                    Курс предназначен для начинающих и охватывает все необходимые знания для того, чтобы вы могли начать
+                    программировать на Python. Вы узнаете, как писать чистый и эффективный код, работать с данными,
+                    использовать функции и модули, а также освоите основы объектно-ориентированного программирования
+                    и веб-разработки.
+                </p>
+            </div>
+        </div>
+
+        <div class="course-program">
+            <h2>Программа курса</h2>
+            <p>Продолжительность 5 часов</p>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <a href="{% url 'lesson_python_begin' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">1</span>
+                            <span class="lesson-title">Введение</span>
+                            <span class="lesson-description">Знакомимся с темой курса</span>
+    <!--                        <div class="lesson-links">-->
+    <!--                            <p class="lesson-link">теория</p>-->
+    <!--                            <p class="lesson-link">тесты</p>-->
+    <!--                            <p class="lesson-link">упражнение</p>-->
+    <!--                        </div>-->
+                        </div>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="{% url 'lesson_python_hello' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">2</span>
+                            <span class="lesson-title">Hello, World!</span>
+                            <span class="lesson-description">Пишем первую программу</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="{% url 'lesson_python_instruction' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">3</span>
+                            <span class="lesson-title">Операторы и выражения</span>
+                            <span class="lesson-description">Знакомимся с основными операторами и выражениями</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="lesson-item locked">
+                    <a href="{% url 'lesson_python_begin' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">4</span>
+                            <span class="lesson-title">Практическое занятие №1</span>
+                            <span class="lesson-description">Тест на основы Python</span>
+    <!--                        <div class="lesson-links">-->
+    <!--                            <p class="lesson-link">теория</p>-->
+    <!--                            <p class="lesson-link">тесты</p>-->
+    <!--                            <p class="lesson-link">упражнение</p>-->
+    <!--                        </div>-->
+                        </div>
+                    </a>
+                </li>
+<!--                <li class="lesson-item">-->
+<!--                    <div class="lesson-header">-->
+<!--                        <span class="lesson-order">4</span>-->
+<!--                        <span class="lesson-title">Арифметические операции</span>-->
+<!--                        <span class="lesson-description">Переводим арифметические действия на язык программирования</span>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="lesson-item">-->
+<!--                    <div class="lesson-header">-->
+<!--                        <span class="lesson-order">5</span>-->
+<!--                        <span class="lesson-title">Ошибки оформления</span>-->
+<!--                        <span class="lesson-description">Изучаем виды ошибок и способы их исправления</span>-->
+<!--                    </div>-->
+<!--                </li>-->
+            </ul>
+        </div>
+    </div>
+{% endblock %}

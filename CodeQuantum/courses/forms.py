@@ -1,10 +1,11 @@
-from .models import Courses
+from .models import Courses, Lesson
 from django.forms import ModelForm, TextInput, NumberInput, Textarea
+from django import forms
 
 class CoursesForm(ModelForm):
     class Meta:
         model = Courses
-        fields = ['title', 'type_cours', 'period', 'exp', 'description', 'price_in_month', 'full_price']
+        fields = ['title', 'type_cours', 'period', 'exp', 'description', 'price_in_month', 'full_price', 'content']
 
         widgets = {
             "title": TextInput(attrs={
@@ -35,5 +36,28 @@ class CoursesForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Полная цена курса'
             }),
+            "content": Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Содержание курса'
+            }),
 
+        }
+
+class LessonForm(forms.ModelForm):
+    class Meta:
+        model = Lesson
+        fields = ['title', 'content', 'order']
+        widgets = {
+            "title": forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Название урока'
+            }),
+            "content": forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Содержание урока'
+             }),
+            "order": forms.NumberInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Порядок'
+            }),
         }

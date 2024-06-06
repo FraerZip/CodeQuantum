@@ -1,32 +1,50 @@
 {% extends 'main/layout.html' %}
 
+{% block title %}Курсы{% endblock %}
+
 {% block courses %}
-    <header class="courses_header">
-        <div class="container">
-            <h1 class="h1_courses">Курсы по программированию</h1>
-<!--            <nav class="nav_courses">-->
-<!--                <button>Программирование</button>-->
-<!--                <button>Анализ данных</button>-->
-<!--                <button>Дизайн</button>-->
-<!--                <button>Менеджмент</button>-->
-<!--                <button>Маркетинг</button>-->
-<!--                <button>Английский язык</button>-->
-<!--                <button>Кем стать в IT</button>-->
-<!--            </nav>-->
-            <div class="filters">
-                <button>Высшее образование</button>
-                <button>С нуля</button>
-                <button>С опытом</button>
-                <button>Бесплатно</button>
-                <button>Платно</button>
-                <button>Сбросить фильтры</button>
-                <input type="text" placeholder="Какой навык или курс ищете?">
-            </div>
+<header class="courses_header">
+    <div class="container">
+        <h1 class="h1_courses">Курсы по программированию</h1>
+        <div class="filters">
+            <button>Высшее образование</button>
+            <button>С нуля</button>
+            <button>С опытом</button>
+            <button>Бесплатно</button>
+            <button>Платно</button>
+            <button>Сбросить фильтры</button>
+            <input type="text" placeholder="Какой навык или курс ищете?">
         </div>
-    </header>
-    <main>
+    </div>
+</header>
+<main>
     <div class="container">
         <section class="courses">
+            <a href="{% url 'python_developer' %}" class="course">
+                <article>
+                    <h2 class="h_courses">Python-разработчик</h2>
+                    <p>Программирование • 9 месяцев • С нуля</p>
+                    <p>от 7 129 ₽/мес</p>
+                    <p>или сразу 138 600 ₽</p>
+                </article>
+            </a>
+            <a href="{% url 'web_developer' %}" class="course-soon">
+                <article>
+                    <h2 class="h_courses">WEB-верстальщик</h2>
+                    <p>Программирование • 6 месяцев • С нуля</p>
+                    <p>от 6 378 ₽/мес</p>
+                    <p>или сразу 124 000 ₽</p>
+                </article>
+            </a>
+
+            <a href="{% url 'java_developer' %}" class="course-soon">
+                <article>
+                    <h2 class="h_courses">Java-разработчик</h2>
+                    <p>Программирование • 10 месяцев • С нуля</p>
+                    <p>от 7 561 ₽/мес</p>
+                    <p>или сразу 147 000 ₽</p>
+                </article>
+            </a>
             {% if course %}
                 {% for el in course %}
                     <div class="course-wrapper">
@@ -55,5 +73,4 @@
         </section>
     </div>
 </main>
-
 {% endblock %}
