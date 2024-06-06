@@ -7,6 +7,30 @@ def courses_home(request):
     course = Courses.objects.all()
     return render(request, 'courses/courses.html', {'course': course})
 
+def web_developer(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/web_developer.html', {'course': course})
+
+def python_developer(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/python_developer.html', {'course': course})
+
+def java_developer(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/java_developer.html', {'course': course})
+
+def lesson_python_hello(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/lesson_python_hello.html', {'course': course})
+
+def lesson_python_begin(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/lesson_python_begin.html', {'course': course})
+
+def lesson_python_instruction(request):
+    course = Courses.objects.all()
+    return render(request, 'courses/lesson_python_instruction.html', {'course': course})
+
 class CoursesDetailView(DetailView):
     model = Courses
     template_name = 'courses/details_view.html'

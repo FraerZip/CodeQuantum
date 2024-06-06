@@ -1,0 +1,76 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Web-разработчик{% endblock %}
+
+{% block courses %}
+    <div class="course-page">
+        <div class="section__header">
+            <h1 class="section__title">Web-разработчик</h1>
+            <div class="course-meta">
+                <span class="course-type">Программирование</span>
+                <span class="course-period">6 месяцев</span>
+                <span class="course-exp">С нуля</span>
+                <span class="course-price">от 6 378 ₽/мес или 124 000 ₽ сразу</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="course-content">
+                <h2>Цели курса</h2>
+                <ul>
+                    <li>Освоить современные технологии и инструменты веб-разработки</li>
+                    <li>Развить навыки проектирования и разработки пользовательского интерфейса (UI)</li>
+                    <li>Научиться разрабатывать и внедрять серверную часть веб-приложений</li>
+                </ul>
+            </div>
+            <div class="course-description">
+                <h2>Описание</h2>
+                <p>
+                    Курс состоит из теоретических занятий, практических упражнений и проектов, которые помогут вам
+                    применить полученные знания на практике. Вы изучите ключевые языки веб-разработки, такие как HTML,
+                    CSS и JavaScript, а также современные фреймворки и библиотеки, такие как React, Angular и Vue.js.
+                    Курс также охватывает серверные технологии, включая Node.js, Express и базы данных, такие как
+                    MongoDB и SQL.
+                    В процессе обучения вы научитесь разрабатывать как фронтенд, так и бэкенд части веб-приложений,
+                    интегрировать их между собой, обеспечивать безопасность и производительность приложений, а также
+                    работать с инструментами для контроля версий и развертывания.
+                </p>
+            </div>
+            <div class="course-program">
+            <h2>Программа курса</h2>
+            <p>Продолжительность 0 часов</p>
+            <ul class="lesson-list">
+                <li class="lesson-item locked">
+                    <a href="{% url 'lesson_python_begin' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">1</span>
+                            <span class="lesson-title">Введение в веб-разработку</span>
+                            <span class="lesson-description">Знакомимся с Front-end</span>
+    <!--                        <div class="lesson-links">-->
+    <!--                            <p class="lesson-link">теория</p>-->
+    <!--                            <p class="lesson-link">тесты</p>-->
+    <!--                            <p class="lesson-link">упражнение</p>-->
+    <!--                        </div>-->
+                        </div>
+                    </a>
+                </li>
+                <li class="lesson-item locked">
+                    <a href="{% url 'lesson_python_hello' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">2</span>
+                            <span class="lesson-title">Основы JavaScript и работа с DOM</span>
+                            <span class="lesson-description">Изучаем основы JavaScript и его роль в веб-разработке</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="lesson-item locked">
+                    <a href="{% url 'lesson_python_instruction' %}" class="course">
+                        <div class="lesson-header">
+                            <span class="lesson-order">3</span>
+                            <span class="lesson-title">Введение в современные JavaScript-фреймворки (React)</span>
+                            <span class="lesson-description">Основы React</span>
+                        </div>
+                    </a>
+                </li>
+        </div>
+    </div>
+{% endblock %}

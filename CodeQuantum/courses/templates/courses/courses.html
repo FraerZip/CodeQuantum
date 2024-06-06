@@ -1,5 +1,7 @@
 {% extends 'main/layout.html' %}
 
+{% block title %}Курсы{% endblock %}
+
 {% block courses %}
 <header class="courses_header">
     <div class="container">
@@ -18,6 +20,31 @@
 <main>
     <div class="container">
         <section class="courses">
+            <a href="{% url 'python_developer' %}" class="course">
+                <article>
+                    <h2 class="h_courses">Python-разработчик</h2>
+                    <p>Программирование • 9 месяцев • С нуля</p>
+                    <p>от 7 129 ₽/мес</p>
+                    <p>или сразу 138 600 ₽</p>
+                </article>
+            </a>
+            <a href="{% url 'web_developer' %}" class="course-soon">
+                <article>
+                    <h2 class="h_courses">WEB-верстальщик</h2>
+                    <p>Программирование • 6 месяцев • С нуля</p>
+                    <p>от 6 378 ₽/мес</p>
+                    <p>или сразу 124 000 ₽</p>
+                </article>
+            </a>
+
+            <a href="{% url 'java_developer' %}" class="course-soon">
+                <article>
+                    <h2 class="h_courses">Java-разработчик</h2>
+                    <p>Программирование • 10 месяцев • С нуля</p>
+                    <p>от 7 561 ₽/мес</p>
+                    <p>или сразу 147 000 ₽</p>
+                </article>
+            </a>
             {% if course %}
                 {% for el in course %}
                     <div class="course-wrapper">

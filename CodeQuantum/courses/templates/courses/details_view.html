@@ -1,5 +1,7 @@
 {% extends 'main/layout.html' %}
 
+{% block title %}{{ course.title }}{% endblock %}
+
 {% block courses %}
     <div class="course-page">
         <div class="section__header">
@@ -8,7 +10,7 @@
                 <span class="course-type">{{ course.type_cours }}</span>
                 <span class="course-period">{{ course.period }}</span>
                 <span class="course-exp">{{ course.exp }}</span>
-                <span class="course-price">{{ course.price_in_month }} ₽/мес или {{ course.full_price }} ₽</span>
+                <span class="course-price">{{ course.price_in_month }} ₽/мес или {{ course.full_price }} ₽ сразу</span>
             </div>
 
         </div>
@@ -37,7 +39,6 @@
             </ul>
         </div>
         <div class="lessons">
-            <h2>Уроки</h2>
             <ul>
                 {% for lesson in course.lessons.all %}
                     <li>{{ lesson.order }}. {{ lesson.title }}</li>
