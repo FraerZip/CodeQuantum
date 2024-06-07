@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}Web-разработчик{% endblock %}
 
@@ -40,7 +40,7 @@
             <p>Продолжительность 0 часов</p>
             <ul class="lesson-list">
                 <li class="lesson-item locked">
-                    <a href="{% url 'lesson_python_begin' %}" class="course">
+                    <a href="{% url 'courses:lesson_python_begin' %}" class="course">
                         <div class="lesson-header">
                             <span class="lesson-order">1</span>
                             <span class="lesson-title">Введение в веб-разработку</span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="lesson-item locked">
-                    <a href="{% url 'lesson_python_hello' %}" class="course">
+                    <a href="{% url 'courses:lesson_python_hello' %}" class="course">
                         <div class="lesson-header">
                             <span class="lesson-order">2</span>
                             <span class="lesson-title">Основы JavaScript и работа с DOM</span>
@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li class="lesson-item locked">
-                    <a href="{% url 'lesson_python_instruction' %}" class="course">
+                    <a href="{% url 'courses:lesson_python_instruction' %}" class="course">
                         <div class="lesson-header">
                             <span class="lesson-order">3</span>
                             <span class="lesson-title">Введение в современные JavaScript-фреймворки (React)</span>

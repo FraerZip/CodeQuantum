@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-
     font-size: 15px;
     line-height: 1.6;
     color: #333;
@@ -22,17 +21,14 @@ hr {
     width: 100%;
     height: 1px;
     margin: 40px 0;
-
     border: 0;
     background-color: #e5e5e5;
 }
-
 
 /* Page */
 .page {
     overflow: hidden;
 }
-
 
 /* Container */
 .container {
@@ -41,8 +37,6 @@ hr {
     padding: 0 15px;
     margin: 0 auto;
 }
-
-
 
 /* Intro */
 .intro {
@@ -53,7 +47,6 @@ hr {
     height: 100vh;
     min-height: 820px;
     position: relative;
-
     background: url("../img/intro-3.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -63,7 +56,6 @@ hr {
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
-
     text-align: center;
 }
 
@@ -81,45 +73,36 @@ hr {
     width: 60px;
     height: 3px;
     margin: 60px auto;
-
     background-color: #fff;
 }
 
 .intro__suptitle {
     margin-bottom: 20px;
-
     font-family: 'Kaushan Script', cursive;
     font-size: 52px;
     color: #fff;
 }
 
-
 /* Header */
 .header {
     width: 100%;
     padding-top: 25px;
-    /* padding-bottom: 30px; */
-
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-
     background-color: #eb8b8d;
 }
 
 .header.fixed {
     padding: 10px 0;
-
     background-color: #eb8b8d;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-
     transform: translate3d(0, 0, 0);
 }
 
@@ -131,8 +114,6 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* align-items: flex-start; */
-
     margin-top: -6px;
 }
 
@@ -141,27 +122,24 @@ hr {
     font-size: 25px;
     font-weight: 700;
     color: #fff;
-
-    
-    
 }
-
 
 /* Nav */
 .nav {
     font-size: 14px;
     text-transform: uppercase;
+    display: flex; /* Ensure nav items are displayed in a row */
+    align-items: center; /* Align nav items vertically */
 }
 
+/* Ensure navigation links are inline and properly spaced */
 .nav__link {
     display: inline-block;
     vertical-align: top;
     margin: 0 15px;
     position: relative;
-
     color: #fff;
     text-decoration: none;
-
     transition: color .1s linear;
 }
 
@@ -170,15 +148,12 @@ hr {
     display: block;
     width: 100%;
     height: 3px;
-
     background-color: #fce38a;
     opacity: 0;
-
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1;
-
     transition: opacity .1s linear;
 }
 
@@ -195,20 +170,45 @@ hr {
     color: #fce38a;
 }
 
+/* Align authorization elements in a row */
+.nav__auth {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.dropdown .nav-link {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+/* Style for the dropdown menu */
+.nav-item.dropdown .dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #ff7e5f;
+    color: #fff;
+}
 
 /* Nav toggle */
 .nav-toggle {
     width: 30px;
     padding: 10px 0;
     display: none;
-
     font-size: 0;
     color: transparent;
-
     border: 0;
     background: none;
     cursor: pointer;
-
     position: absolute;
     top: 24px;
     right: 24px;
@@ -223,16 +223,13 @@ hr {
     display: block;
     width: 100%;
     height: 3px;
-
     background-color: #fff;
-
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-
     transition: background .2s linear;
 }
 
@@ -245,13 +242,10 @@ hr {
     content: "";
     width: 100%;
     height: 3px;
-
     background-color: #fff;
-
     position: absolute;
     left: 0;
     z-index: 1;
-
     transition: transform .2s linear;
 }
 
@@ -265,7 +259,7 @@ hr {
 
 .nav-toggle.active .nav-toggle__item:before {
     transform-origin: left top;
-    transform: rotate(45deg) translate3d(0px, -2px, 0)
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
 }
 
 .nav-toggle.active .nav-toggle__item:after {
@@ -1979,6 +1973,69 @@ textarea.form-control {
     resize: vertical;
 }
 
+.btn-success {
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    background: white;
+    color: #5f5c5c;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.7s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+.btn-success:hover {
+    opacity: .7;
+    color: white;
+    background: linear-gradient(to bottom, #feb47b, #ff7e5f);
+    transition: opacity .2s linear;
+}
+
+/* Стили для ошибок */
+.alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.form-group {
+    padding: 0 10px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+
 /* Динамическая страница с курсами */
 .course-page {
     width: 85%;
@@ -2391,4 +2448,211 @@ table td {
 table th {
     background-color: #f5f5f5;
     font-weight: bold;
+}
+
+/* Стили для контейнера формы */
+.login-container {
+    background: #fff; /* Белый фон */
+    border-radius: 8px; /* Радиус скругления углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 40px 20px; /* Внутренние отступы */
+    max-width: 400px; /* Максимальная ширина контейнера */
+    width: 100%; /* Делаем контейнер шириной 100% */
+    position: relative; /* Позиционирование для отображения поверх всего */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 1;
+    margin: auto;
+}
+
+.login-container h1 {
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 28px; /* Размер шрифта заголовка */
+}
+
+.login-container .form-control {
+    margin-bottom: 20px; /* Отступ снизу */
+    height: 45px; /* Высота полей ввода */
+    font-size: 16px; /* Размер шрифта полей ввода */
+    padding-left: 10px; /* Внутренний отступ слева */
+    width: 100%; /* Ширина полей ввода */
+    box-sizing: border-box; /* Учет внутренних отступов и рамки в ширине */
+}
+
+.login-container .btn {
+    width: 100%; /* Ширина кнопки 100% */
+    padding: 10px; /* Внутренние отступы кнопки */
+    font-size: 18px; /* Размер шрифта кнопки */
+}
+
+/* Стили для контейнера профиля */
+.profile-container {
+    background: #fff; /* Белый фон */
+    border-radius: 8px; /* Радиус скругления углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 40px 20px; /* Внутренние отступы */
+    max-width: 800px; /* Максимальная ширина контейнера */
+    width: 100%; /* Делаем контейнер шириной 100% */
+    position: relative; /* Позиционирование для отображения поверх всего */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 1;
+    overflow: auto; /* Разрешаем скроллинг для контейнера профиля */
+}
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    width: 150px; /* Ширина фотографии */
+    height: 150px; /* Высота фотографии */
+    border-radius: 50%; /* Скругление углов */
+    object-fit: cover; /* Обрезка изображения по размеру */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.profile-edit .form-control {
+    margin-bottom: 20px; /* Отступ снизу */
+    height: 45px; /* Высота полей ввода */
+    font-size: 16px; /* Размер шрифта полей ввода */
+    padding-left: 10px; /* Внутренний отступ слева */
+    width: 100%; /* Ширина полей ввода */
+    box-sizing: border-box; /* Учет внутренних отступов и рамки в ширине */
+}
+
+.profile-edit .btn {
+    width: 100%; /* Ширина кнопки 100% */
+    padding: 10px; /* Внутренние отступы кнопки */
+    font-size: 18px; /* Размер шрифта кнопки */
+}
+
+.profile-edit .form-label {
+    display: flex;
+    justify-content: start;
+    font-weight: 400;
+    left: 10px;
+    padding-left: 4px;
+}
+
+/* Медиазапросы для адаптивного отображения   ДОДЕЛАТЬ  */
+@media (max-width: 1920px) {
+    .profile-container {
+        max-width: 600px; /* Уменьшаем максимальную ширину контейнера */
+    }
+}
+
+@media (max-width: 1280px) {
+    .profile-container {
+        max-width: 500px; /* Еще больше уменьшаем максимальную ширину контейнера */
+        padding: 20px; /* Уменьшаем внутренние отступы */
+    }
+}
+
+
+/* Стили для контейнера формы */
+.registration-container {
+    background: #fff; /* Белый фон */
+    border-radius: 8px; /* Радиус скругления углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 40px 20px; /* Внутренние отступы */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    width: 100%; /* Делаем контейнер шириной 100% */
+    position: relative; /* Позиционирование для отображения поверх всего */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 1;
+    margin: auto;
+}
+
+.registration-container h1 {
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 28px; /* Размер шрифта заголовка */
+}
+
+.registration-container .form-control {
+    margin-bottom: 20px; /* Отступ снизу */
+    height: 45px; /* Высота полей ввода */
+    font-size: 16px; /* Размер шрифта полей ввода */
+    padding-left: 10px; /* Внутренний отступ слева */
+    width: 100%; /* Ширина полей ввода */
+    box-sizing: border-box; /* Учет внутренних отступов и рамки в ширине */
+}
+
+.registration-container .btn {
+    width: 100%; /* Ширина кнопки 100% */
+    padding: 10px; /* Внутренние отступы кнопки */
+    font-size: 18px; /* Размер шрифта кнопки */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-container .form-group {
+    width: 48%;
+}
+
+
+/*test*/
+
+.profile-container-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-header-test {
+    margin-bottom: 30px;
+}
+
+.profile-info-test {
+    margin-bottom: 30px;
+}
+
+.profile-photo-test {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-edit-test .form-control {
+    height: 45px;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+
+.profile-edit-test .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.profile-edit-test .form-label {
+    display: flex;
+    justify-content: start;
+    font-weight: 400;
+    padding-left: 4px;
+    margin-bottom: 10px;
 }

@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}Что такое Python?{% endblock %}
 
@@ -64,10 +64,10 @@
                 </li>
             </ol>
             <div class="lesson-navigation">
-                <a href="{% url 'python_developer' %}" class="lesson-button prev-button">
+                <a href="{% url 'courses:python_developer' %}" class="lesson-button prev-button">
                     < Курс "Python-разработчик"
                 </a>
-                <a href="{% url 'lesson_python_hello' %}" class="lesson-button next-button">
+                <a href="{% url 'courses:lesson_python_hello' %}" class="lesson-button next-button">
                     Hello, World! >
                 </a>
             </div>

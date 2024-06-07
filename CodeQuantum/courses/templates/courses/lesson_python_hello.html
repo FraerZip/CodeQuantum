@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}Hello-world{% endblock %}
 
@@ -97,10 +97,10 @@ print('Почему {} забавляется с этим Python?'.format(name))
             <p>Это означает, что предложения, идущие вместе, <strong>должны</strong> иметь одинаковый отступ. Каждый такой набор предложений называется <em>блоком</em>. В дальнейших главах мы увидим примеры того, насколько важны блоки.</p>
             <p>Вы должны запомнить, что неправильные отступы могут приводить к возникновению ошибок. Например:</p>
             <div class="lesson-navigation">
-                <a href="{% url 'lesson_python_begin' %}" class="lesson-button prev-button">
+                <a href="{% url 'courses:lesson_python_begin' %}" class="lesson-button prev-button">
                     < Введение
                 </a>
-                <a href="{% url 'lesson_python_instruction' %}" class="lesson-button next-button">
+                <a href="{% url 'courses:lesson_python_instruction' %}" class="lesson-button next-button">
                     Операторы и выражение >
                 </a>
             </div>

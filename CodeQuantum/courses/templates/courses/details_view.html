@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}{{ course.title }}{% endblock %}
 
@@ -44,7 +44,7 @@
                     <li>{{ lesson.order }}. {{ lesson.title }}</li>
                 {% endfor %}
             </ul>
-            <a href="{% url 'create_lesson' course.id %}" class="add-lesson-button">Добавить урок</a>
+            <a href="{% url 'courses:create_lesson' course.id %}" class="add-lesson-button">Добавить урок</a>
         </div>
     </div>
 {% endblock %}

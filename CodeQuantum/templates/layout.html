@@ -18,24 +18,37 @@
 <body>
 
 <header class="header" id="header">
-
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo" {% comment %}data-scroll="#intro"{% endcomment %}>
-                <a href="{% url 'home' %}" class="header__logo">CodeQuantum Studio</a></div>
+            <div class="header__logo">
+                <a href="{% url 'main:home' %}" class="header__logo">CodeQuantum Studio</a>
+            </div>
 
             <nav class="nav" id="nav">
-                <a class="nav__link" href="{% url 'about' %}" {% comment %}data-scroll="#about"{% endcomment %}>О нас</a>
-<!--                <a class="nav__link" href="#" data-scroll="#services">Сервис</a>-->
-                <a class="nav__link" href="{% url 'courses_home' %}">Курсы</a>
-<!--                <a class="nav__link" href="#" data-scroll="#works">Работа</a>-->
-<!--                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>-->
-<!--                <a class="nav__link" href="#">-->
-<!--                    <i class="fas fa-shopping-cart"></i>-->
-<!--                </a>-->
+                <a class="nav__link" href="{% url 'main:about' %}">О нас</a>
+                <a class="nav__link" href="{% url 'courses:courses_home' %}">Курсы</a>
                 <a class="nav__link" href="#">
                     <i class="fas fa-search"></i>
                 </a>
+                <div class="nav__auth">
+                    {% if not user.is_authenticated %}
+                        <a class="nav__link" href="{% url 'user:login' %}">Войти</a>
+                    {% else %}
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Мой профиль
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'user:profile' %}">Личный кабинет</a></li>
+                                {% if user.is_admin or user.is_staff %}
+                                    <li><a class="dropdown-item" href="{% url 'admin:index' %}">Админ панель</a></li>
+                                {% endif %}
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'user:logout' %}">Выйти</a></li>
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
             </nav>
 
             <button class="nav-toggle" id="nav_toggle" type="button">
@@ -43,7 +56,6 @@
             </button>
         </div>
     </div>
-
 </header>
 
 

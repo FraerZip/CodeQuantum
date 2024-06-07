@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}Операторы и выражения{% endblock %}
 
@@ -291,10 +291,10 @@ print('Периметр равен', 2 * (length + breadth))</code></pre>
             <p>Длина и ширина прямоугольника хранятся в переменных <code>length</code> и <code>breadth</code> соответственно. Мы используем их для вычисления периметра и площади прямоугольника при помощи выражений. Результаты выражения <code>length * breadth</code> сохраняется в переменной <code>area</code>, после чего выводятся на экран функцией <code>print</code>. Во втором случае мы напрямую подставляем значение выражения <code>2 * (length + breadth)</code> в функцию <code>print</code>.</p>
             <p>Также обратите внимание, как Python «красиво печатает» результат. Несмотря на то, что мы не указали пробела между <code>'Площадь равна'</code> и переменной <code>area</code>, Python подставляет его за нас, чтобы получить красивый и понятный вывод. Программа же остается при этом легко читаемой (поскольку нам не нужно заботиться о пробелах между строками, которые мы выводим). Это пример того, как Python облегчает жизнь программисту.</p>
             <div class="lesson-navigation">
-                <a href="{% url 'lesson_python_hello' %}" class="lesson-button prev-button">
+                <a href="{% url 'courses:lesson_python_hello' %}" class="lesson-button prev-button">
                     < Hello, World!
                 </a>
-<!--                <a href="{% url 'lesson_python_instruction' %}" class="lesson-button next-button">-->
+<!--                <a href="{% url 'courses:lesson_python_instruction' %}" class="lesson-button next-button">-->
 <!--                    Операторы и выражение >-->
 <!--                </a>-->
             </div>
