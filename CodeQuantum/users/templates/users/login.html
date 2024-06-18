@@ -2,19 +2,24 @@
 
 {% block title %}{% endblock %}
 
-{% block main_page %}
+{% block something %}
 <div class="course-page">
     <div class="login-container">
-        <h1>Войти</h1>
+        <h1>Вход</h1>
         <form method="post" action="{% url 'user:login' %}">
             {% csrf_token %}
+            {% comment %}{{form}} {% endcomment %}
+            {% if form.non_field_errors %}
+            <p>{{form.non_field_errors}}</p>
+            {% endif %}
+
 <!--            <span>{{ error }}</span><br>  -->
             {% if request.GET.next %}
                 <input type="hidden" name="text" value="{{ request.GET.next }}">
             {% endif %}
 
             <input type="text" placeholder="Логин" name="username" id="id_username" class="form-control" autofocus
-                   value="{{ forms.username.value }}"
+                   value="{% if form.username.value %}{{ form.username.value }}{% endif %}"
                    required> <br>
 
             {% if form.username.errors %}
@@ -27,7 +32,16 @@
                 <div class="alert alert-danger alert-dismissible fade show">{{form.password.errors}}</div>
             {% endif %}
 
-            {% comment %}
+
+            <button class="btn btn-success" type="submit">Войти</button>
+
+            <a href="{% url 'user:registration' %}" class="btn btn-success">Регистрация</a>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% comment %}
             {% for item in form %}
                 {{ item }}
             {% endfor %}
@@ -37,10 +51,3 @@
             {% comment %} {{ form.username }} {% endcomment %}
 
             {% comment %} {{ form.password }} {% endcomment %}
-            <button class="btn btn-success" type="submit">Войти</button>
-            
-            <a href="{% url 'user:registration' %}" class="btn btn-success">Регистрация</a>
-        </form>
-    </div>
-</div>
-{% endblock %}

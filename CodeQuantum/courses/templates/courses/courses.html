@@ -2,7 +2,7 @@
 
 {% block title %}Курсы{% endblock %}
 
-{% block courses %}
+{% block something %}
 <header class="courses_header">
     <div class="container">
         <h1 class="h1_courses">Курсы по программированию</h1>
@@ -45,28 +45,24 @@
                     <p>или сразу 147 000 ₽</p>
                 </article>
             </a>
-            {% if course %}
-                {% for el in course %}
-                    <div class="course-wrapper">
-                        <a href="{% url 'courses:course-detail' el.id %}" class="course">
-                            <article>
-                                <h2 class="h_courses">{{ el.title }}</h2>
-                                <p>{{ el.type_cours }} • {{ el.period }} • {{ el.exp }}</p>
-                                <p>{{ el.description }}</p>
-                                <p>от {{ el.price_in_month }} ₽/мес</p>
-                                <p>или сразу {{ el.full_price }} ₽</p>
-                            </article>
-                        </a>
-                        <!-- Кнопки для изменения и удаления курса -->
-                        <div class="course-buttons">
-                            <a href="{% url 'courses:course-update' el.id %}" class="btn btn-edit">Изменить</a>
-                            <a href="{% url 'courses:course-delete' el.id %}" class="btn btn-delete">Удалить</a>
-                        </div>
+            {% for el in course %}
+                <div class="course-wrapper">
+                    <a href="{% url 'courses:course-detail' el.id %}" class="course">
+                        <article>
+                            <h2 class="h_courses">{{ el.title }}</h2>
+                            <p>{{ el.type_cours }} • {{ el.period }} • {{ el.exp }}</p>
+                            <p>{{ el.description }}</p>
+                            <p>от {{ el.price_in_month }} ₽/мес</p>
+                            <p>или сразу {{ el.full_price }} ₽</p>
+                        </article>
+                    </a>
+                    <!-- Кнопки для изменения и удаления курса -->
+                    <div class="course-buttons">
+                        <a href="{% url 'courses:course-update' el.id %}" class="btn btn-edit">Изменить</a>
+                        <a href="{% url 'courses:course-delete' el.id %}" class="btn btn-delete">Удалить</a>
                     </div>
-                {% endfor %}
-            {% else %}
-                <p>В настоящий момент курсов нет!</p>
-            {% endif %}
+                </div>
+            {% endfor %}
             <a href="{% url 'courses:create_course' %}">
                 <button class="add-course-button">Добавить курс</button>
             </a>
