@@ -44,7 +44,9 @@
                     <li>{{ lesson.order }}. {{ lesson.title }}</li>
                 {% endfor %}
             </ul>
-            <a href="{% url 'courses:create_lesson' course.id %}" class="add-lesson-button">Добавить урок</a>
+            {% if user.is_admin or user.is_staff %}
+                <a href="{% url 'courses:create_lesson' course.id %}" class="add-lesson-button">Добавить урок</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

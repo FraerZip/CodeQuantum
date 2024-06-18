@@ -57,15 +57,19 @@
                         </article>
                     </a>
                     <!-- Кнопки для изменения и удаления курса -->
+                    {% if user.is_admin or user.is_staff %}
                     <div class="course-buttons">
                         <a href="{% url 'courses:course-update' el.id %}" class="btn btn-edit">Изменить</a>
                         <a href="{% url 'courses:course-delete' el.id %}" class="btn btn-delete">Удалить</a>
                     </div>
+                    {% endif %}
                 </div>
             {% endfor %}
+            {% if user.is_admin or user.is_staff %}
             <a href="{% url 'courses:create_course' %}">
                 <button class="add-course-button">Добавить курс</button>
             </a>
+            {% endif %}
         </section>
     </div>
 </main>
