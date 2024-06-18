@@ -1975,6 +1975,7 @@ textarea.form-control {
 
 .btn-success {
     padding: 10px 15px;
+    margin-bottom: 20px;
     border-radius: 4px;
     text-decoration: none;
     background: white;
@@ -2496,6 +2497,14 @@ table th {
     text-align: center; /* Выравнивание текста по центру */
     z-index: 1;
     overflow: auto; /* Разрешаем скроллинг для контейнера профиля */
+    margin: 100px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    min-height: 100vh; /* Минимальная высота 100% высоты экрана */
 }
 
 .profile-header {

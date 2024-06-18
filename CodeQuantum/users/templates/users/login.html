@@ -38,6 +38,8 @@
 
             {% comment %} {{ form.password }} {% endcomment %}
             <button class="btn btn-success" type="submit">Войти</button>
+            
+            <a href="{% url 'user:registration' %}" class="btn btn-success">Регистрация</a>
         </form>
     </div>
 </div>
